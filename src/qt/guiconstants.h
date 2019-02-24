@@ -47,7 +47,7 @@ static const int MAX_URI_LENGTH = 255;
 #define SPINNER_FRAMES 36
 
 #define QAPP_ORG_NAME "mFm coin"
-#define QAPP_ORG_DOMAIN "mfmcoin.org"
+#define QAPP_ORG_DOMAIN "mfmcoin.com"
 #define QAPP_APP_NAME_DEFAULT "mFm coin-Qt"
 #define QAPP_APP_NAME_TESTNET "mFm coin-Qt-testnet"
 
