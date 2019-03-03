@@ -46,9 +46,9 @@ static const int MAX_URI_LENGTH = 255;
 /* Number of frames in spinner animation */
 #define SPINNER_FRAMES 36
 
-#define QAPP_ORG_NAME "mFm coin"
+#define QAPP_ORG_NAME "mFmcoin"
 #define QAPP_ORG_DOMAIN "mfmcoin.com"
-#define QAPP_APP_NAME_DEFAULT "mFm coin-Qt"
-#define QAPP_APP_NAME_TESTNET "mFm coin-Qt-testnet"
+#define QAPP_APP_NAME_DEFAULT "mFmcoin-Qt"
+#define QAPP_APP_NAME_TESTNET "mFmcoin-Qt-testnet"
 
 #endif // BITCOIN_QT_GUICONSTANTS_H

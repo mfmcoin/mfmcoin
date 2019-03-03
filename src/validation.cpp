@@ -48,7 +48,7 @@
 #include <boost/thread.hpp>
 
 #if defined(NDEBUG)
-# error "mFm coin cannot be compiled without assertions."
+# error "mFmcoin cannot be compiled without assertions."
 #endif
 
 #define MICRO 0.000001
@@ -238,7 +238,7 @@ CTxMemPool mempool(&feeEstimator);
 /** Constant stuff for coinbase transactions we create: */
 CScript COINBASE_FLAGS;
 
-const std::string strMessageMagic = "mFm coin Signed Message:\n";
+const std::string strMessageMagic = "mFmcoin Signed Message:\n";
 
 // Internal stuff
 namespace {

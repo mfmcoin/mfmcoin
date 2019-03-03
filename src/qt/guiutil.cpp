@@ -127,7 +127,7 @@ void setupAddressWidget(QValidatedLineEdit *widget, QWidget *parent)
 #if QT_VERSION >= 0x040700
     // We don't want translators to use own addresses in translations
     // and this is the only place, where this address is supplied.
-    widget->setPlaceholderText(QObject::tr("Enter a mFm coin address (e.g. %1)").arg(
+    widget->setPlaceholderText(QObject::tr("Enter a mFmcoin address (e.g. %1)").arg(
         QString::fromStdString(DummyAddress(Params()))));
 #endif
     widget->setValidator(new BitcoinAddressEntryValidator(parent));
@@ -615,10 +615,10 @@ fs::path static StartupShortcutPath()
 {
     std::string chain = ChainNameFromCommandLine();
     if (chain == CBaseChainParams::MAIN)
-        return GetSpecialFolderPath(CSIDL_STARTUP) / "mFm coin.lnk";
+        return GetSpecialFolderPath(CSIDL_STARTUP) / "mFmcoin.lnk";
     if (chain == CBaseChainParams::TESTNET) // Remove this special case when CBaseChainParams::TESTNET = "testnet4"
-        return GetSpecialFolderPath(CSIDL_STARTUP) / "mFm coin (testnet).lnk";
-    return GetSpecialFolderPath(CSIDL_STARTUP) / strprintf("mFm coin (%s).lnk", chain);
+        return GetSpecialFolderPath(CSIDL_STARTUP) / "mFmcoin (testnet).lnk";
+    return GetSpecialFolderPath(CSIDL_STARTUP) / strprintf("mFmcoin (%s).lnk", chain);
 }
 
 bool GetStartOnSystemStartup()
@@ -758,9 +758,9 @@ bool SetStartOnSystemStartup(bool fAutoStart)
         optionFile << "[Desktop Entry]\n";
         optionFile << "Type=Application\n";
         if (chain == CBaseChainParams::MAIN)
-            optionFile << "Name=mFm coin\n";
+            optionFile << "Name=mFmcoin\n";
         else
-            optionFile << strprintf("Name=mFm coin (%s)\n", chain);
+            optionFile << strprintf("Name=mFmcoin (%s)\n", chain);
         optionFile << "Exec=" << pszExePath << strprintf(" -min -testnet=%d -regtest=%d\n", gArgs.GetBoolArg("-testnet", false), gArgs.GetBoolArg("-regtest", false));
         optionFile << "Terminal=false\n";
         optionFile << "Hidden=false\n";

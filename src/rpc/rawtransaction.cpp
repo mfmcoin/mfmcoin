@@ -427,7 +427,7 @@ UniValue createrawtransaction(const JSONRPCRequest& request)
         } else {
             CTxDestination destination = DecodeDestination(name_);
             if (!IsValidDestination(destination)) {
-                throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, std::string("Invalid mFm coin address: ") + name_);
+                throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, std::string("Invalid mFmcoin address: ") + name_);
             }
 
             if (!destinations.insert(destination).second) {
