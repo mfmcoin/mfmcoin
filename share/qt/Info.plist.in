@@ -29,16 +29,16 @@
   <string>????</string>
 
   <key>CFBundleExecutable</key>
-  <string>mFm coin-Qt</string>
+  <string>MFMCoin-Qt</string>
   
   <key>CFBundleName</key>
-  <string>mFm coin-Qt</string>
+  <string>MFMCoin-Qt</string>
 
   <key>LSHasLocalizedDisplayName</key>
   <true/>
 
   <key>CFBundleIdentifier</key>
-  <string>org.mfmcoin.mFm coin-Qt</string>
+  <string>org.MFMCoin.MFMCoin-Qt</string>
 
   <key>CFBundleURLTypes</key>
   <array>
@@ -46,10 +46,10 @@
       <key>CFBundleTypeRole</key>
       <string>Editor</string>
       <key>CFBundleURLName</key>
-      <string>org.mfmcoin.mFmcoinPayment</string>
+      <string>org.MFMCoin.MFMCoinPayment</string>
       <key>CFBundleURLSchemes</key>
       <array>
-        <string>mfmcoin</string>
+        <string>MFMCoin</string>
       </array>
     </dict>
   </array>
@@ -58,9 +58,9 @@
   <array>
     <dict>
       <key>UTTypeIdentifier</key>
-      <string>org.mfmcoin.paymentrequest</string>
+      <string>org.MFMCoin.paymentrequest</string>
       <key>UTTypeDescription</key>
-      <string>mFm coin payment request</string>
+      <string>MFMCoin payment request</string>
       <key>UTTypeConformsTo</key>
       <array>
         <string>public.data</string>
@@ -68,10 +68,10 @@
       <key>UTTypeTagSpecification</key>
       <dict>
         <key>public.mime-type</key>
-        <string>application/x-mfmcoin-payment-request</string>
+        <string>application/x-MFMCoin-payment-request</string>
         <key>public.filename-extension</key>
         <array>
-          <string>mfmcoinpaymentrequest</string>
+          <string>MFMCoinpaymentrequest</string>
         </array>
       </dict>
     </dict>
@@ -84,7 +84,7 @@
       <string>Editor</string>
       <key>LSItemContentTypes</key>
       <array>
-        <string>org.mfmcoin.paymentrequest</string>
+        <string>org.MFMCoin.paymentrequest</string>
       </array>
       <key>LSHandlerRank</key>
       <string>Owner</string>

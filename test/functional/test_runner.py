@@ -213,7 +213,7 @@ def main():
     logging.basicConfig(format='%(message)s', level=logging_level)
 
     # Create base test directory
-    tmpdir = "%s/mfmcoin_test_runner_%s" % (args.tmpdirprefix, datetime.datetime.now().strftime("%Y%m%d_%H%M%S"))
+    tmpdir = "%s/MFMCoin_test_runner_%s" % (args.tmpdirprefix, datetime.datetime.now().strftime("%Y%m%d_%H%M%S"))
     os.makedirs(tmpdir)
 
     logging.debug("Temporary test directory at %s" % tmpdir)
@@ -295,9 +295,9 @@ def run_tests(test_list, src_dir, build_dir, exeext, tmpdir, jobs=1, enable_cove
         print("%sWARNING!%s There is a cache directory here: %s. If tests fail unexpectedly, try deleting the cache directory." % (BOLD[1], BOLD[0], cache_dir))
 
     #Set env vars
-    if "MFMCOIND" not in os.environ:
-        os.environ["MFMCOIND"] = build_dir + '/src/mfmcoind' + exeext
-        os.environ["MFMCOINCLI"] = build_dir + '/src/mfmcoin-cli' + exeext
+    if "mfmcoind" not in os.environ:
+        os.environ["mfmcoind"] = build_dir + '/src/mfmcoind' + exeext
+        os.environ["MFMCoinCLI"] = build_dir + '/src/mfmcoin-cli' + exeext
 
     tests_dir = src_dir + '/test/functional/'
 

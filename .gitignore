@@ -1,13 +1,14 @@
 *.tar.gz
 
 *.exe
-src/mfmcoin
+src/MFMCoin
 src/mfmcoind
 src/mfmcoin-cli
 src/mfmcoin-tx
 src/test/test_mfmcoin
 src/test/test_mfmcoin_fuzzy
 src/qt/test/test_mfmcoin-qt
+src/bench/bench_mfmcoin
 
 # autoreconf
 Makefile.in
@@ -81,7 +82,7 @@ src/qt/bitcoin-qt.includes
 *.qm
 Makefile
 mfmcoin-qt
-mfmcoin-Qt.app
+MFMCoin-Qt.app
 background.tiff*
 
 # Unit-tests
@@ -98,7 +99,7 @@ build
 *.gcno
 *.gcda
 /*.info
-test_mfmcoin.coverage/
+test_MFMCoin.coverage/
 total.coverage/
 coverage_percent.txt
 

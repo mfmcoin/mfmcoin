@@ -130,8 +130,8 @@
         <translation>Reindexando bloques no disco...</translation>
     </message>
     <message>
-        <source>Send coins to a mFm coin address</source>
-        <translation>Enviar moedas a unha dirección mFm coin</translation>
+        <source>Send coins to a MFMCoin address</source>
+        <translation>Enviar moedas a unha dirección MFMCoin</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -154,8 +154,8 @@
         <translation>&amp;Verificar mensaxe...</translation>
     </message>
     <message>
-        <source>mFm coin</source>
-        <translation>mFm coin</translation>
+        <source>MFMCoin</source>
+        <translation>MFMCoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -182,12 +182,12 @@
         <translation>Encriptar as claves privadas que pertencen ao teu moedeiro</translation>
     </message>
     <message>
-        <source>Sign messages with your mFm coin addresses to prove you own them</source>
-        <translation>Asina mensaxes coas túas direccións mFm coin para probar que te pertencen</translation>
+        <source>Sign messages with your MFMCoin addresses to prove you own them</source>
+        <translation>Asina mensaxes coas túas direccións MFMCoin para probar que te pertencen</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified mFm coin addresses</source>
-        <translation>Verificar mensaxes para asegurar que foron asinados con direccións mFm coin dadas.</translation>
+        <source>Verify messages to ensure they were signed with specified MFMCoin addresses</source>
+        <translation>Verificar mensaxes para asegurar que foron asinados con direccións MFMCoin dadas.</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -206,8 +206,8 @@
         <translation>Barra de ferramentas</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and mfmcoin: URIs)</source>
-        <translation>Solicitar pagos (xenera códigos QR e mfmcoin: URIs)</translation>
+        <source>Request payments (generates QR codes and MFMCoin: URIs)</source>
+        <translation>Solicitar pagos (xenera códigos QR e MFMCoin: URIs)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -218,8 +218,8 @@
         <translation>Amosar a listaxe de etiquetas e direccións para recibir empregadas</translation>
     </message>
     <message>
-        <source>Open a mfmcoin: URI or payment request</source>
-        <translation>Abrir un mfmcoin: URI ou solicitude de pago</translation>
+        <source>Open a MFMCoin: URI or payment request</source>
+        <translation>Abrir un MFMCoin: URI ou solicitude de pago</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -405,8 +405,8 @@
         <translation>Empregar un directorio de datos personalizado</translation>
     </message>
     <message>
-        <source>mFm coin</source>
-        <translation>mFm coin</translation>
+        <source>MFMCoin</source>
+        <translation>MFMCoin</translation>
     </message>
     <message>
         <source>Error</source>
@@ -470,8 +470,8 @@
         <translation>Moedeiro</translation>
     </message>
     <message>
-        <source>Automatically open the mFm coin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Abrir automáticamente o porto do cliente mFm coin no router. Esto so funciona se o teu router soporta UPnP e está habilitado.</translation>
+        <source>Automatically open the MFMCoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Abrir automáticamente o porto do cliente MFMCoin no router. Esto so funciona se o teu router soporta UPnP e está habilitado.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -553,8 +553,8 @@
         <translation>Formulario</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the mFm coin network after a connection is established, but this process has not completed yet.</source>
-        <translation>A información amosada por estar desactualizada. O teu moedeiro sincronízase automáticamente coa rede mFm coin despois de que se estableza unha conexión, pero este proceso non está todavía rematado.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the MFMCoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>A información amosada por estar desactualizada. O teu moedeiro sincronízase automáticamente coa rede MFMCoin despois de que se estableza unha conexión, pero este proceso non está todavía rematado.</translation>
     </message>
     <message>
         <source>Your current spendable balance</source>
@@ -919,8 +919,8 @@
         <translation>Copiar a sinatura actual ao portapapeis do sistema</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this mFm coin address</source>
-        <translation>Asina a mensaxe para probar que posees esta dirección mFm coin</translation>
+        <source>Sign the message to prove you own this MFMCoin address</source>
+        <translation>Asina a mensaxe para probar que posees esta dirección MFMCoin</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -939,8 +939,8 @@
         <translation>&amp;Verificar Mensaxe</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified mFm coin address</source>
-        <translation>Verificar a mensaxe para asegurar que foi asinada coa dirección mFm coin especificada</translation>
+        <source>Verify the message to ensure it was signed with the specified MFMCoin address</source>
+        <translation>Verificar a mensaxe para asegurar que foi asinada coa dirección MFMCoin especificada</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -1020,8 +1020,8 @@
         <translation>Executar no fondo como un demo e aceptar comandos</translation>
     </message>
     <message>
-        <source>mFm coin Core</source>
-        <translation>Core de mFm coin</translation>
+        <source>MFMCoin Core</source>
+        <translation>Core de MFMCoin</translation>
     </message>
     <message>
         <source>Bind to given address and always listen on it. Use [host]:port notation for IPv6</source>

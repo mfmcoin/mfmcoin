@@ -62,12 +62,12 @@
         <translation>Ontvanger adresse</translation>
     </message>
     <message>
-        <source>These are your mFm coin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Hierdie is die adresse vanwaar u mFm coin betalings stuur. U moet altyd die bedrag en die adres van die ontvanger nagaan voordat u enige munte stuur.</translation>
+        <source>These are your MFMCoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Hierdie is die adresse vanwaar u MFMCoin betalings stuur. U moet altyd die bedrag en die adres van die ontvanger nagaan voordat u enige munte stuur.</translation>
     </message>
     <message>
-        <source>These are your mFm coin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Hierdie is die adresse waar u mFmcoins sal ontvang. Ons beveel aan dat u 'n nuwe adres kies vir elke transaksie</translation>
+        <source>These are your MFMCoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Hierdie is die adresse waar u MFMCoins sal ontvang. Ons beveel aan dat u 'n nuwe adres kies vir elke transaksie</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -172,8 +172,8 @@
         <translation>Bevestig dat die beursie gekodifiseer is</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR MFMCOINS&lt;/b&gt;!</source>
-        <translation>Waarskuwing: Indien u die beursie kodifiseer en u vergeet u wagwoord &lt;b&gt;VERLOOR U AL U MFMCOINS&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR MFMCoinS&lt;/b&gt;!</source>
+        <translation>Waarskuwing: Indien u die beursie kodifiseer en u vergeet u wagwoord &lt;b&gt;VERLOOR U AL U MFMCoinS&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -334,8 +334,8 @@
         <translation>Besig met herindeksering van blokke op hardeskyf...</translation>
     </message>
     <message>
-        <source>Send coins to a mFm coin address</source>
-        <translation>Stuur munte na 'n mFm coin adres</translation>
+        <source>Send coins to a MFMCoin address</source>
+        <translation>Stuur munte na 'n MFMCoin adres</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -358,8 +358,8 @@
         <translation>&amp;Verifieer boodskap...</translation>
     </message>
     <message>
-        <source>mFm coin</source>
-        <translation>mFm coin</translation>
+        <source>MFMCoin</source>
+        <translation>MFMCoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -386,12 +386,12 @@
         <translation>Kodifiseer die private sleutes wat aan jou beursie gekoppel is.</translation>
     </message>
     <message>
-        <source>Sign messages with your mFm coin addresses to prove you own them</source>
-        <translation>Onderteken boodskappe met u mFm coin adresse om u eienaarskap te bewys</translation>
+        <source>Sign messages with your MFMCoin addresses to prove you own them</source>
+        <translation>Onderteken boodskappe met u MFMCoin adresse om u eienaarskap te bewys</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified mFm coin addresses</source>
-        <translation>Verifieër boodskappe om seker te maak dat dit met die gespesifiseerde mFm coin adresse</translation>
+        <source>Verify messages to ensure they were signed with specified MFMCoin addresses</source>
+        <translation>Verifieër boodskappe om seker te maak dat dit met die gespesifiseerde MFMCoin adresse</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -410,8 +410,8 @@
         <translation>Orebalk</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and mfmcoin: URIs)</source>
-        <translation>Versoek betalings (genereer QR-kodes en mfmcoin: URI's)</translation>
+        <source>Request payments (generates QR codes and MFMCoin: URIs)</source>
+        <translation>Versoek betalings (genereer QR-kodes en MFMCoin: URI's)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -422,8 +422,8 @@
         <translation>Vertoon die lys van gebruikte ontvangers-adresse en etikette</translation>
     </message>
     <message>
-        <source>Open a mfmcoin: URI or payment request</source>
-        <translation>Skep 'n mfmcoin: URI of betalingsversoek</translation>
+        <source>Open a MFMCoin: URI or payment request</source>
+        <translation>Skep 'n MFMCoin: URI of betalingsversoek</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -516,8 +516,8 @@
         <translation>Inkomende transaksie</translation>
     </message>
     <message>
-        <source>A fatal error occurred. mFm coin can no longer continue safely and will quit.</source>
-        <translation>'N fatale fout het voorgekom. mFm coin kan nie meer veilig voortgaan nie en sal nou toemaak.</translation>
+        <source>A fatal error occurred. MFMCoin can no longer continue safely and will quit.</source>
+        <translation>'N fatale fout het voorgekom. MFMCoin kan nie meer veilig voortgaan nie en sal nou toemaak.</translation>
     </message>
 </context>
 <context>
@@ -710,8 +710,8 @@
         <translation>Wysig stuur adres</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid mFm coin address.</source>
-        <translation>Die ingevoerde adres "%1" is nie 'n geldige mFm coin adres nie.</translation>
+        <source>The entered address "%1" is not a valid MFMCoin address.</source>
+        <translation>Die ingevoerde adres "%1" is nie 'n geldige MFMCoin adres nie.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -823,8 +823,8 @@
         <translation>Gebruik 'n persoonlike data gids:</translation>
     </message>
     <message>
-        <source>mFm coin</source>
-        <translation>mFm coin</translation>
+        <source>MFMCoin</source>
+        <translation>MFMCoin</translation>
     </message>
     <message>
         <source>The wallet will also be stored in this directory.</source>
@@ -1188,8 +1188,8 @@
         <translation>Bedrag</translation>
     </message>
     <message>
-        <source>Enter a mFm coin address (e.g. %1)</source>
-        <translation>Voer in 'n mFm coin adres (bv. %1)</translation>
+        <source>Enter a MFMCoin address (e.g. %1)</source>
+        <translation>Voer in 'n MFMCoin adres (bv. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1918,8 +1918,8 @@
         <translation>Opsies:</translation>
     </message>
     <message>
-        <source>mFm coin Core</source>
-        <translation>mFm coin Kern</translation>
+        <source>MFMCoin Core</source>
+        <translation>MFMCoin Kern</translation>
     </message>
     <message>
         <source>Connection options:</source>

@@ -62,12 +62,12 @@
         <translation>Receiving addresses</translation>
     </message>
     <message>
-        <source>These are your mFm coin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>These are your mFm coin addresses for sending payments. Always check the amount and the receiving address before sending coins.</translation>
+        <source>These are your MFMCoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>These are your MFMCoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</translation>
     </message>
     <message>
-        <source>These are your mFm coin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>These are your mFm coin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</translation>
+        <source>These are your MFMCoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>These are your MFMCoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -172,8 +172,8 @@
         <translation>Confirm wallet encryption</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR MFMCOINS&lt;/b&gt;!</source>
-        <translation>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR MFMCOINS&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR MFMCoinS&lt;/b&gt;!</source>
+        <translation>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR MFMCoinS&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -184,8 +184,8 @@
         <translation>Wallet encrypted</translation>
     </message>
     <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your mfmcoins from being stolen by malware infecting your computer.</source>
-        <translation>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your mfmcoins from being stolen by malware infecting your computer.</translation>
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your MFMCoins from being stolen by malware infecting your computer.</source>
+        <translation>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your MFMCoins from being stolen by malware infecting your computer.</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -342,8 +342,8 @@
         <translation>Reindexing blocks on disk...</translation>
     </message>
     <message>
-        <source>Send coins to a mFm coin address</source>
-        <translation>Send coins to a mFm coin address</translation>
+        <source>Send coins to a MFMCoin address</source>
+        <translation>Send coins to a MFMCoin address</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -366,8 +366,8 @@
         <translation>&amp;Verify message...</translation>
     </message>
     <message>
-        <source>mFm coin</source>
-        <translation>mFm coin</translation>
+        <source>MFMCoin</source>
+        <translation>MFMCoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -394,12 +394,12 @@
         <translation>Encrypt the private keys that belong to your wallet</translation>
     </message>
     <message>
-        <source>Sign messages with your mFm coin addresses to prove you own them</source>
-        <translation>Sign messages with your mFm coin addresses to prove you own them</translation>
+        <source>Sign messages with your MFMCoin addresses to prove you own them</source>
+        <translation>Sign messages with your MFMCoin addresses to prove you own them</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified mFm coin addresses</source>
-        <translation>Verify messages to ensure they were signed with specified mFm coin addresses</translation>
+        <source>Verify messages to ensure they were signed with specified MFMCoin addresses</source>
+        <translation>Verify messages to ensure they were signed with specified MFMCoin addresses</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -418,8 +418,8 @@
         <translation>Tabs toolbar</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and mfmcoin: URIs)</source>
-        <translation>Request payments (generates QR codes and mfmcoin: URIs)</translation>
+        <source>Request payments (generates QR codes and MFMCoin: URIs)</source>
+        <translation>Request payments (generates QR codes and MFMCoin: URIs)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -430,16 +430,16 @@
         <translation>Show the list of used receiving addresses and labels</translation>
     </message>
     <message>
-        <source>Open a mfmcoin: URI or payment request</source>
-        <translation>Open a mfmcoin: URI or payment request</translation>
+        <source>Open a MFMCoin: URI or payment request</source>
+        <translation>Open a MFMCoin: URI or payment request</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
         <translation>&amp;Command-line options</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to mFm coin network</source>
-        <translation><numerusform>%n active connection to mFm coin network</numerusform><numerusform>%n active connections to mFm coin network</numerusform></translation>
+        <source>%n active connection(s) to MFMCoin network</source>
+        <translation><numerusform>%n active connection to MFMCoin network</numerusform><numerusform>%n active connections to MFMCoin network</numerusform></translation>
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
@@ -482,8 +482,8 @@
         <translation>Up to date</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible mFm coin command-line options</source>
-        <translation>Show the %1 help message to get a list with possible mFm coin command-line options</translation>
+        <source>Show the %1 help message to get a list with possible MFMCoin command-line options</source>
+        <translation>Show the %1 help message to get a list with possible MFMCoin command-line options</translation>
     </message>
     <message>
         <source>%1 client</source>
@@ -552,8 +552,8 @@
         <translation>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;locked&lt;/b&gt;</translation>
     </message>
     <message>
-        <source>A fatal error occurred. mFm coin can no longer continue safely and will quit.</source>
-        <translation>A fatal error occurred. mFm coin can no longer continue safely and will quit.</translation>
+        <source>A fatal error occurred. MFMCoin can no longer continue safely and will quit.</source>
+        <translation>A fatal error occurred. MFMCoin can no longer continue safely and will quit.</translation>
     </message>
 </context>
 <context>
@@ -746,8 +746,8 @@
         <translation>Edit sending address</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid mFm coin address.</source>
-        <translation>The entered address "%1" is not a valid mFm coin address.</translation>
+        <source>The entered address "%1" is not a valid MFMCoin address.</source>
+        <translation>The entered address "%1" is not a valid MFMCoin address.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -875,8 +875,8 @@
         <translation>Use a custom data directory:</translation>
     </message>
     <message>
-        <source>mFm coin</source>
-        <translation>mFm coin</translation>
+        <source>MFMCoin</source>
+        <translation>MFMCoin</translation>
     </message>
     <message>
         <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
@@ -887,8 +887,8 @@
         <translation>Approximately %1 GB of data will be stored in this directory.</translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the mFm coin block chain.</source>
-        <translation>%1 will download and store a copy of the mFm coin block chain.</translation>
+        <source>%1 will download and store a copy of the MFMCoin block chain.</source>
+        <translation>%1 will download and store a copy of the MFMCoin block chain.</translation>
     </message>
     <message>
         <source>The wallet will also be stored in this directory.</source>
@@ -918,12 +918,12 @@
         <translation>Form</translation>
     </message>
     <message>
-        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the mfmcoin network, as detailed below.</source>
-        <translation>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronising with the mFm coin network, as detailed below.</translation>
+        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the MFMCoin network, as detailed below.</source>
+        <translation>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronising with the MFMCoin network, as detailed below.</translation>
     </message>
     <message>
-        <source>Attempting to spend mfmcoins that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
-        <translation>Attempting to spend mFmcoins that are affected by not-yet-displayed transactions will not be accepted by the network.</translation>
+        <source>Attempting to spend MFMCoins that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <translation>Attempting to spend MFMCoins that are affected by not-yet-displayed transactions will not be accepted by the network.</translation>
     </message>
     <message>
         <source>Number of blocks left</source>
@@ -1092,8 +1092,8 @@
         <translation>&amp;Spend unconfirmed change</translation>
     </message>
     <message>
-        <source>Automatically open the mFm coin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Automatically open the mFm coin client port on the router. This only works when your router supports UPnP and it is enabled.</translation>
+        <source>Automatically open the MFMCoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Automatically open the MFMCoin client port on the router. This only works when your router supports UPnP and it is enabled.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -1108,8 +1108,8 @@
         <translation>Allow incomin&amp;g connections</translation>
     </message>
     <message>
-        <source>Connect to the mFm coin network through a SOCKS5 proxy.</source>
-        <translation>Connect to the mFm coin network through a SOCKS5 proxy.</translation>
+        <source>Connect to the MFMCoin network through a SOCKS5 proxy.</source>
+        <translation>Connect to the MFMCoin network through a SOCKS5 proxy.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1144,8 +1144,8 @@
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the mFm coin network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>Connect to the mFm coin network through a separate SOCKS5 proxy for Tor hidden services.</translation>
+        <source>Connect to the MFMCoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <translation>Connect to the MFMCoin network through a separate SOCKS5 proxy for Tor hidden services.</translation>
     </message>
     <message>
         <source>&amp;Window</source>
@@ -1251,8 +1251,8 @@
         <translation>Form</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the mFm coin network after a connection is established, but this process has not completed yet.</source>
-        <translation>The displayed information may be out of date. Your Wallet automatically synchronises with the mFm coin Network after a connection is established, but this process has not been completed yet.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the MFMCoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>The displayed information may be out of date. Your Wallet automatically synchronises with the MFMCoin Network after a connection is established, but this process has not been completed yet.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -1326,8 +1326,8 @@
         <translation>Payment request error</translation>
     </message>
     <message>
-        <source>Cannot start mfmcoin: click-to-pay handler</source>
-        <translation>Cannot start mFm coin: click-to-pay handler</translation>
+        <source>Cannot start MFMCoin: click-to-pay handler</source>
+        <translation>Cannot start MFMCoin: click-to-pay handler</translation>
     </message>
     <message>
         <source>URI handling</source>
@@ -1342,8 +1342,8 @@
         <translation>Invalid payment address %1</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid mFm coin address or malformed URI parameters.</source>
-        <translation>URI cannot be parsed! This can be caused by an invalid mFm coin address or malformed URI parameters.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid MFMCoin address or malformed URI parameters.</source>
+        <translation>URI cannot be parsed! This can be caused by an invalid MFMCoin address or malformed URI parameters.</translation>
     </message>
     <message>
         <source>Payment request file handling</source>
@@ -1444,8 +1444,8 @@
         <translation>Amount</translation>
     </message>
     <message>
-        <source>Enter a mFm coin address (e.g. %1)</source>
-        <translation>Enter a mFm coin address (e.g. %1)</translation>
+        <source>Enter a MFMCoin address (e.g. %1)</source>
+        <translation>Enter a MFMCoin address (e.g. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1868,8 +1868,8 @@
         <translation>&amp;Message:</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the mFm coin network.</source>
-        <translation>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the mFm coin network.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the MFMCoin network.</source>
+        <translation>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the MFMCoin network.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -2105,8 +2105,8 @@
         <translation>Hide</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for mfmcoin transactions than the network can process.</source>
-        <translation>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for mfmcoin transactions than the network can process.</translation>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for MFMCoin transactions than the network can process.</source>
+        <translation>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for MFMCoin transactions than the network can process.</translation>
     </message>
     <message>
         <source>(read the tooltip)</source>
@@ -2277,8 +2277,8 @@
         <translation><numerusform>Estimated to begin confirmation within %n block.</numerusform><numerusform>Estimated to begin confirmation within %n blocks.</numerusform></translation>
     </message>
     <message>
-        <source>Warning: Invalid mFm coin address</source>
-        <translation>Warning: Invalid mFm coin address</translation>
+        <source>Warning: Invalid MFMCoin address</source>
+        <translation>Warning: Invalid MFMCoin address</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -2320,8 +2320,8 @@
         <translation>This is a normal payment.</translation>
     </message>
     <message>
-        <source>The mFm coin address to send the payment to</source>
-        <translation>The mFm coin address to send the payment to</translation>
+        <source>The MFMCoin address to send the payment to</source>
+        <translation>The MFMCoin address to send the payment to</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -2340,8 +2340,8 @@
         <translation>Remove this entry</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less mfmcoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
-        <translation>The fee will be deducted from the amount being sent. The recipient will receive less mfmcoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</translation>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less MFMCoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <translation>The fee will be deducted from the amount being sent. The recipient will receive less MFMCoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</translation>
     </message>
     <message>
         <source>S&amp;ubtract fee from amount</source>
@@ -2368,8 +2368,8 @@
         <translation>Enter a label for this address to add it to the list of used addresses</translation>
     </message>
     <message>
-        <source>A message that was attached to the mfmcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the mFm coin network.</source>
-        <translation>A message that was attached to the mfmcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the mFm coin network.</translation>
+        <source>A message that was attached to the MFMCoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the MFMCoin network.</source>
+        <translation>A message that was attached to the MFMCoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the MFMCoin network.</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -2413,12 +2413,12 @@
         <translation>&amp;Sign Message</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive mfmcoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
-        <translation>You can sign messages/agreements with your addresses to prove you can receive mfmcoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</translation>
+        <source>You can sign messages/agreements with your addresses to prove you can receive MFMCoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <translation>You can sign messages/agreements with your addresses to prove you can receive MFMCoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</translation>
     </message>
     <message>
-        <source>The mFm coin address to sign the message with</source>
-        <translation>The mFm coin address to sign the message with</translation>
+        <source>The MFMCoin address to sign the message with</source>
+        <translation>The MFMCoin address to sign the message with</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2449,8 +2449,8 @@
         <translation>Copy the current signature to the system clipboard</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this mFm coin address</source>
-        <translation>Sign the message to prove you own this mFm coin address</translation>
+        <source>Sign the message to prove you own this MFMCoin address</source>
+        <translation>Sign the message to prove you own this MFMCoin address</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -2473,12 +2473,12 @@
         <translation>Enter the receiver's address, message (ensure you copy line breaks, spaces, tabs, etc. exactly) and signature below to verify the message. Be careful not to read more into the signature than what is in the signed message itself, to avoid being tricked by a man-in-the-middle attack. Note that this only proves the signing party receives with the address, it cannot prove sendership of any transaction!</translation>
     </message>
     <message>
-        <source>The mFm coin address the message was signed with</source>
-        <translation>The mFm coin address the message was signed with</translation>
+        <source>The MFMCoin address the message was signed with</source>
+        <translation>The MFMCoin address the message was signed with</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified mFm coin address</source>
-        <translation>Verify the message to ensure it was signed with the specified mFm coin address</translation>
+        <source>Verify the message to ensure it was signed with the specified MFMCoin address</source>
+        <translation>Verify the message to ensure it was signed with the specified MFMCoin address</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -3170,8 +3170,8 @@
         <translation>Unable to start HTTP server. See debug log for details.</translation>
     </message>
     <message>
-        <source>mFm coin Core</source>
-        <translation>mFm coin Core</translation>
+        <source>MFMCoin Core</source>
+        <translation>MFMCoin Core</translation>
     </message>
     <message>
         <source>The %s developers</source>

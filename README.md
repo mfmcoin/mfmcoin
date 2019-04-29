@@ -1,42 +1,42 @@
-mFm coin Core integration/staging tree
+MFMCoin Core integration/staging tree
 =====================================
 
-[![Build Status](https://travis-ci.org/mfmcoin-project/mfmcoin.svg?branch=master)](https://travis-ci.org/mfmcoin-project/mfmcoin)
+[![Build Status](https://travis-ci.org/MFMCoin-project/MFMCoin.svg?branch=master)](https://travis-ci.org/MFMCoin-project/MFMCoin)
 
-https://mfmcoin.org
+https://MFMCoin.org
 
-What is mFm coin?
+What is MFMCoin?
 ----------------
 
-mFm coin is an experimental digital currency that enables instant payments to
-anyone, anywhere in the world. mFm coin uses peer-to-peer technology to operate
+MFMCoin is an experimental digital currency that enables instant payments to
+anyone, anywhere in the world. MFMCoin uses peer-to-peer technology to operate
 with no central authority: managing transactions and issuing money are carried
-out collectively by the network. mFm coin Core is the name of open source
+out collectively by the network. MFMCoin Core is the name of open source
 software which enables the use of this currency.
 
 For more information, as well as an immediately useable, binary version of
-the mFm coin Core software, see [https://mfmcoin.org](https://mfmcoin.org).
+the MFMCoin Core software, see [https://MFMCoin.org](https://MFMCoin.org).
 
 License
 -------
 
-mFm coin Core is released under the terms of the MIT license. See [COPYING](COPYING) for more
+MFMCoin Core is released under the terms of the MIT license. See [COPYING](COPYING) for more
 information or see https://opensource.org/licenses/MIT.
 
 Development Process
 -------------------
 
 The `master` branch is regularly built and tested, but is not guaranteed to be
-completely stable. [Tags](https://github.com/mfmcoin-project/mfmcoin/tags) are created
-regularly to indicate new official, stable release versions of mFm coin Core.
+completely stable. [Tags](https://github.com/MFMCoin-project/MFMCoin/tags) are created
+regularly to indicate new official, stable release versions of MFMCoin Core.
 
 The contribution workflow is described in [CONTRIBUTING.md](CONTRIBUTING.md).
 
-The developer [mailing list](https://groups.google.com/forum/#!forum/mfmcoin-dev)
+The developer [mailing list](https://groups.google.com/forum/#!forum/MFMCoin-dev)
 should be used to discuss complicated or controversial changes before working
 on a patch set.
 
-Developer IRC can be found on Freenode at #mfmcoin-dev.
+Developer IRC can be found on Freenode at #MFMCoin-dev.
 
 Testing
 -------
@@ -70,7 +70,7 @@ Translations
 ------------
 
 We only accept translation fixes that are submitted through [Bitcoin Core's Transifex page](https://www.transifex.com/projects/p/bitcoin/).
-Translations are converted to mFm coin periodically.
+Translations are converted to MFMCoin periodically.
 
 Translations are periodically pulled from Transifex and merged into the git repository. See the
 [translation process](doc/translation_process.md) for details on how this works.

@@ -49,7 +49,8 @@ static CBlock CreateGenesisBlock(const char* pszTimestamp, const CScript& genesi
  */
 static CBlock CreateGenesisBlock(uint32_t nTime, uint32_t nNonce, uint32_t nBits, int32_t nVersion, const CAmount& genesisReward)
 {
-    const char* pszTimestamp = "NY Times 05/Oct/2011 Steve Jobs, Apple’s Visionary, Dies at 56";
+    const char* pszTimestamp = "MFMCoin is launched. May the FORCE be with you! – Brian Oakes - MFM Strategies, LLC";
+
     const CScript genesisOutputScript = CScript() << ParseHex("040184710fa689ad5023690c80f3a49c8f13f8d45b8c857fbcbc8bc4a8e4d3eb4b10f4d4604fa08dce601aaf0f470216fe1b51850b4acf21b179c45070ac7b03a9") << OP_CHECKSIG;
     return CreateGenesisBlock(pszTimestamp, genesisOutputScript, nTime, nNonce, nBits, nVersion, genesisReward);
 }
@@ -120,10 +121,11 @@ public:
         nDefaultPort = 6593;
         nPruneAfterHeight = 100000;
 
-        genesis = CreateGenesisBlock(1549201941, 688 , 0x207fffff, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(1556946060, 10 , 0x207fffff, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0xacb5cd2937f0a6d9e6d2a9db340483867077a5c833515767e39240db180f0684"));
-        assert(genesis.hashMerkleRoot == uint256S("0x97ddfbbae6be97fd6cdf3e7ca13232a3afff2353e29badfab7f73011edd4ced9"));
+
+        assert(consensus.hashGenesisBlock == uint256S("0x53b2a6d089ead1fa52f59d95e3a97ebebfade8cf26032c9c61debdc301a14849"));
+        assert(genesis.hashMerkleRoot == uint256S("0xb3a5587f0bcf1196dd5122f1f0312bf865f0550979ce0d149089e05822fb0b87"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,44);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,46);
@@ -131,7 +133,7 @@ public:
         base58Prefixes[EXT_PUBLIC_KEY] = {0x04, 0x88, 0xB2, 0x1E};
         base58Prefixes[EXT_SECRET_KEY] = {0x04, 0x88, 0xAD, 0xE4};
 
-        bech32_hrp = "mFm";
+        bech32_hrp = "MFM";
 
         vFixedSeeds = std::vector<SeedSpec6>(pnSeed6_main, pnSeed6_main + ARRAYLEN(pnSeed6_main));
 
@@ -141,7 +143,7 @@ public:
 
         checkpointData = {
             {
-                { 0, uint256S("0xacb5cd2937f0a6d9e6d2a9db340483867077a5c833515767e39240db180f0684")},               
+                { 0, uint256S("0x53b2a6d089ead1fa52f59d95e3a97ebebfade8cf26032c9c61debdc301a14849")},
             }
         };
 
@@ -168,7 +170,7 @@ public:
         consensus.BIP34Hash = uint256();
         consensus.BIP65Height = 1;
         consensus.BIP66Height = 1;
-        consensus.powLimit = uint256S("00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
+        consensus.powLimit = uint256S("7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
         consensus.nPowTargetTimespan = 9000;
         consensus.nPowTargetSpacing = 150;
         consensus.fPowAllowMinDifficultyBlocks = true;
@@ -202,10 +204,11 @@ public:
         nDefaultPort = 16595;
         nPruneAfterHeight = 1000;
 
-        genesis = CreateGenesisBlock(1549201940, 9 , 0x207fffff, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(1556946060, 10 , 0x207fffff, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x0ae2f8c968ecdbfe3192d027ff30c228f3d105b8511ba9d999145683d7b05fb1"));
-        assert(genesis.hashMerkleRoot == uint256S("0x97ddfbbae6be97fd6cdf3e7ca13232a3afff2353e29badfab7f73011edd4ced9"));
+
+        assert(consensus.hashGenesisBlock == uint256S("0x53b2a6d089ead1fa52f59d95e3a97ebebfade8cf26032c9c61debdc301a14849"));
+        assert(genesis.hashMerkleRoot == uint256S("0xb3a5587f0bcf1196dd5122f1f0312bf865f0550979ce0d149089e05822fb0b87"));
 
         vFixedSeeds.clear();
         vSeeds.clear();              
@@ -216,7 +219,7 @@ public:
         base58Prefixes[EXT_PUBLIC_KEY] = {0x04, 0x35, 0x87, 0xCF};
         base58Prefixes[EXT_SECRET_KEY] = {0x04, 0x35, 0x83, 0x94};
 
-        bech32_hrp = "tmFm";
+        bech32_hrp = "tMFM";
 
         vFixedSeeds = std::vector<SeedSpec6>(pnSeed6_test, pnSeed6_test + ARRAYLEN(pnSeed6_test));
 
@@ -226,7 +229,7 @@ public:
 
         checkpointData = (CCheckpointData) {
             {
-                { 0, uint256S("0x0ae2f8c968ecdbfe3192d027ff30c228f3d105b8511ba9d999145683d7b05fb1")},
+                { 0, uint256S("0x53b2a6d089ead1fa52f59d95e3a97ebebfade8cf26032c9c61debdc301a14849")},
             }
         };
 
@@ -283,14 +286,15 @@ public:
         nDefaultPort = 19444;
         nPruneAfterHeight = 1000;
 
-        genesis = CreateGenesisBlock(1549201939, 125 , 0x207fffff, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(1556946060, 125 , 0x207fffff, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x84352752c3464742ce376a81232736ce037b604f01214e441b457a8e6098c7e7"));
-        assert(genesis.hashMerkleRoot == uint256S("0x97ddfbbae6be97fd6cdf3e7ca13232a3afff2353e29badfab7f73011edd4ced9"));
+
+        assert(consensus.hashGenesisBlock == uint256S("0x53645f6d3ddbea185273b62f501e562a26cb3a48455ac8abce6ae952053a4b70"));
+        assert(genesis.hashMerkleRoot == uint256S("0xb3a5587f0bcf1196dd5122f1f0312bf865f0550979ce0d149089e05822fb0b87"));
 
         vFixedSeeds.clear(); //!< Regtest mode doesn't have any fixed seeds.
         vSeeds.clear();      //!< Regtest mode doesn't have any DNS seeds.
-        vSeeds.emplace_back("dnsseed.mfmcoin.com");
+        vSeeds.emplace_back("dnsseed.MFMCoin.com");
 
         fDefaultConsistencyChecks = true;
         fRequireStandard = false;
@@ -298,7 +302,7 @@ public:
 
         checkpointData = {
             {
-                { 0, uint256S("0x84352752c3464742ce376a81232736ce037b604f01214e441b457a8e6098c7e7")},
+                { 0, uint256S("0x53645f6d3ddbea185273b62f501e562a26cb3a48455ac8abce6ae952053a4b70")},
             }
         };
 
@@ -314,7 +318,7 @@ public:
         base58Prefixes[EXT_PUBLIC_KEY] = {0x04, 0x35, 0x87, 0xCF};
         base58Prefixes[EXT_SECRET_KEY] = {0x04, 0x35, 0x83, 0x94};
 
-        bech32_hrp = "rmFm";
+        bech32_hrp = "rMFM";
     }
 };
 

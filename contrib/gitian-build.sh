@@ -16,7 +16,7 @@ osx=true
 SIGNER=
 VERSION=
 commit=false
-url=https://github.com/mfmcoin-project/mfmcoin
+url=https://github.com/MFMCoin-project/MFMCoin
 proc=2
 mem=2000
 lxc=true
@@ -30,7 +30,7 @@ commitFiles=true
 read -d '' usage <<- EOF
 Usage: $scriptName [-c|u|v|b|s|B|o|h|j|m|] signer version
 
-Run this script from the directory containing the mfmcoin, gitian-builder, gitian.sigs.ltc, and mfmcoin-detached-sigs.
+Run this script from the directory containing the MFMCoin, gitian-builder, gitian.sigs.ltc, and MFMCoin-detached-sigs.
 
 Arguments:
 signer          GPG signer to sign each build assert file
@@ -38,7 +38,7 @@ version		Version number, commit, or branch to build. If building a commit or bra
 
 Options:
 -c|--commit	Indicate that the version argument is for a commit or branch
--u|--url	Specify the URL of the repository. Default is https://github.com/mfmcoin-project/mfmcoin
+-u|--url	Specify the URL of the repository. Default is https://github.com/MFMCoin-project/MFMCoin
 -v|--verify 	Verify the gitian build
 -b|--build	Do a gitian build
 -s|--sign	Make signed binaries for Windows and Mac OSX
@@ -229,8 +229,8 @@ echo ${COMMIT}
 if [[ $setup = true ]]
 then
     sudo apt-get install ruby apache2 git apt-cacher-ng python-vm-builder qemu-kvm qemu-utils
-    git clone https://github.com/mfmcoin-project/gitian.sigs.ltc.git
-    git clone https://github.com/mfmcoin-project/mfmcoin-detached-sigs.git
+    git clone https://github.com/MFMCoin-project/gitian.sigs.ltc.git
+    git clone https://github.com/MFMCoin-project/MFMCoin-detached-sigs.git
     git clone https://github.com/devrandom/gitian-builder.git
     pushd ./gitian-builder
     if [[ -n "$USE_LXC" ]]
@@ -244,7 +244,7 @@ then
 fi
 
 # Set up build
-pushd ./mfmcoin
+pushd ./MFMCoin
 git fetch
 git checkout ${COMMIT}
 popd
@@ -253,7 +253,7 @@ popd
 if [[ $build = true ]]
 then
 	# Make output folder
-	mkdir -p ./mfmcoin-binaries/${VERSION}
+	mkdir -p ./MFMCoin-binaries/${VERSION}
 	
 	# Build Dependencies
 	echo ""
@@ -263,7 +263,7 @@ then
 	mkdir -p inputs
 	wget -N -P inputs $osslPatchUrl
 	wget -N -P inputs $osslTarUrl
-	make -C ../mfmcoin/depends download SOURCES_PATH=`pwd`/cache/common
+	make -C ../MFMCoin/depends download SOURCES_PATH=`pwd`/cache/common
 
 	# Linux
 	if [[ $linux = true ]]
@@ -271,9 +271,9 @@ then
             echo ""
 	    echo "Compiling ${VERSION} Linux"
 	    echo ""
-	    ./bin/gbuild -j ${proc} -m ${mem} --commit mfmcoin=${COMMIT} --url mfmcoin=${url} ../mfmcoin/contrib/gitian-descriptors/gitian-linux.yml
-	    ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-linux --destination ../gitian.sigs.ltc/ ../mfmcoin/contrib/gitian-descriptors/gitian-linux.yml
-	    mv build/out/mfmcoin-*.tar.gz build/out/src/mfmcoin-*.tar.gz ../mfmcoin-binaries/${VERSION}
+	    ./bin/gbuild -j ${proc} -m ${mem} --commit MFMCoin=${COMMIT} --url MFMCoin=${url} ../MFMCoin/contrib/gitian-descriptors/gitian-linux.yml
+	    ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-linux --destination ../gitian.sigs.ltc/ ../MFMCoin/contrib/gitian-descriptors/gitian-linux.yml
+	    mv build/out/MFMCoin-*.tar.gz build/out/src/MFMCoin-*.tar.gz ../MFMCoin-binaries/${VERSION}
 	fi
 	# Windows
 	if [[ $windows = true ]]
@@ -281,10 +281,10 @@ then
 	    echo ""
 	    echo "Compiling ${VERSION} Windows"
 	    echo ""
-	    ./bin/gbuild -j ${proc} -m ${mem} --commit mfmcoin=${COMMIT} --url mfmcoin=${url} ../mfmcoin/contrib/gitian-descriptors/gitian-win.yml
-	    ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-win-unsigned --destination ../gitian.sigs.ltc/ ../mfmcoin/contrib/gitian-descriptors/gitian-win.yml
-	    mv build/out/mfmcoin-*-win-unsigned.tar.gz inputs/mfmcoin-win-unsigned.tar.gz
-	    mv build/out/mfmcoin-*.zip build/out/mfmcoin-*.exe ../mfmcoin-binaries/${VERSION}
+	    ./bin/gbuild -j ${proc} -m ${mem} --commit MFMCoin=${COMMIT} --url MFMCoin=${url} ../MFMCoin/contrib/gitian-descriptors/gitian-win.yml
+	    ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-win-unsigned --destination ../gitian.sigs.ltc/ ../MFMCoin/contrib/gitian-descriptors/gitian-win.yml
+	    mv build/out/MFMCoin-*-win-unsigned.tar.gz inputs/MFMCoin-win-unsigned.tar.gz
+	    mv build/out/MFMCoin-*.zip build/out/MFMCoin-*.exe ../MFMCoin-binaries/${VERSION}
 	fi
 	# Mac OSX
 	if [[ $osx = true ]]
@@ -292,10 +292,10 @@ then
 	    echo ""
 	    echo "Compiling ${VERSION} Mac OSX"
 	    echo ""
-	    ./bin/gbuild -j ${proc} -m ${mem} --commit mfmcoin=${COMMIT} --url mfmcoin=${url} ../mfmcoin/contrib/gitian-descriptors/gitian-osx.yml
-	    ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-osx-unsigned --destination ../gitian.sigs.ltc/ ../mfmcoin/contrib/gitian-descriptors/gitian-osx.yml
-	    mv build/out/mfmcoin-*-osx-unsigned.tar.gz inputs/mfmcoin-osx-unsigned.tar.gz
-	    mv build/out/mfmcoin-*.tar.gz build/out/mfmcoin-*.dmg ../mfmcoin-binaries/${VERSION}
+	    ./bin/gbuild -j ${proc} -m ${mem} --commit MFMCoin=${COMMIT} --url MFMCoin=${url} ../MFMCoin/contrib/gitian-descriptors/gitian-osx.yml
+	    ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-osx-unsigned --destination ../gitian.sigs.ltc/ ../MFMCoin/contrib/gitian-descriptors/gitian-osx.yml
+	    mv build/out/MFMCoin-*-osx-unsigned.tar.gz inputs/MFMCoin-osx-unsigned.tar.gz
+	    mv build/out/MFMCoin-*.tar.gz build/out/MFMCoin-*.dmg ../MFMCoin-binaries/${VERSION}
 	fi
 	popd
 
@@ -322,27 +322,27 @@ then
 	echo ""
 	echo "Verifying v${VERSION} Linux"
 	echo ""
-	./bin/gverify -v -d ../gitian.sigs.ltc/ -r ${VERSION}-linux ../mfmcoin/contrib/gitian-descriptors/gitian-linux.yml
+	./bin/gverify -v -d ../gitian.sigs.ltc/ -r ${VERSION}-linux ../MFMCoin/contrib/gitian-descriptors/gitian-linux.yml
 	# Windows
 	echo ""
 	echo "Verifying v${VERSION} Windows"
 	echo ""
-	./bin/gverify -v -d ../gitian.sigs.ltc/ -r ${VERSION}-win-unsigned ../mfmcoin/contrib/gitian-descriptors/gitian-win.yml
+	./bin/gverify -v -d ../gitian.sigs.ltc/ -r ${VERSION}-win-unsigned ../MFMCoin/contrib/gitian-descriptors/gitian-win.yml
 	# Mac OSX	
 	echo ""
 	echo "Verifying v${VERSION} Mac OSX"
 	echo ""	
-	./bin/gverify -v -d ../gitian.sigs.ltc/ -r ${VERSION}-osx-unsigned ../mfmcoin/contrib/gitian-descriptors/gitian-osx.yml
+	./bin/gverify -v -d ../gitian.sigs.ltc/ -r ${VERSION}-osx-unsigned ../MFMCoin/contrib/gitian-descriptors/gitian-osx.yml
 	# Signed Windows
 	echo ""
 	echo "Verifying v${VERSION} Signed Windows"
 	echo ""
-	./bin/gverify -v -d ../gitian.sigs.ltc/ -r ${VERSION}-osx-signed ../mfmcoin/contrib/gitian-descriptors/gitian-osx-signer.yml
+	./bin/gverify -v -d ../gitian.sigs.ltc/ -r ${VERSION}-osx-signed ../MFMCoin/contrib/gitian-descriptors/gitian-osx-signer.yml
 	# Signed Mac OSX
 	echo ""
 	echo "Verifying v${VERSION} Signed Mac OSX"
 	echo ""
-	./bin/gverify -v -d ../gitian.sigs.ltc/ -r ${VERSION}-osx-signed ../mfmcoin/contrib/gitian-descriptors/gitian-osx-signer.yml	
+	./bin/gverify -v -d ../gitian.sigs.ltc/ -r ${VERSION}-osx-signed ../MFMCoin/contrib/gitian-descriptors/gitian-osx-signer.yml	
 	popd
 fi
 
@@ -357,10 +357,10 @@ then
 	    echo ""
 	    echo "Signing ${VERSION} Windows"
 	    echo ""
-	    ./bin/gbuild -i --commit signature=${COMMIT} ../mfmcoin/contrib/gitian-descriptors/gitian-win-signer.yml
-	    ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-win-signed --destination ../gitian.sigs.ltc/ ../mfmcoin/contrib/gitian-descriptors/gitian-win-signer.yml
-	    mv build/out/mfmcoin-*win64-setup.exe ../mfmcoin-binaries/${VERSION}
-	    mv build/out/mfmcoin-*win32-setup.exe ../mfmcoin-binaries/${VERSION}
+	    ./bin/gbuild -i --commit signature=${COMMIT} ../MFMCoin/contrib/gitian-descriptors/gitian-win-signer.yml
+	    ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-win-signed --destination ../gitian.sigs.ltc/ ../MFMCoin/contrib/gitian-descriptors/gitian-win-signer.yml
+	    mv build/out/MFMCoin-*win64-setup.exe ../MFMCoin-binaries/${VERSION}
+	    mv build/out/MFMCoin-*win32-setup.exe ../MFMCoin-binaries/${VERSION}
 	fi
 	# Sign Mac OSX
 	if [[ $osx = true ]]
@@ -368,9 +368,9 @@ then
 	    echo ""
 	    echo "Signing ${VERSION} Mac OSX"
 	    echo ""
-	    ./bin/gbuild -i --commit signature=${COMMIT} ../mfmcoin/contrib/gitian-descriptors/gitian-osx-signer.yml
-	    ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-osx-signed --destination ../gitian.sigs.ltc/ ../mfmcoin/contrib/gitian-descriptors/gitian-osx-signer.yml
-	    mv build/out/mfmcoin-osx-signed.dmg ../mfmcoin-binaries/${VERSION}/mfmcoin-${VERSION}-osx.dmg
+	    ./bin/gbuild -i --commit signature=${COMMIT} ../MFMCoin/contrib/gitian-descriptors/gitian-osx-signer.yml
+	    ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-osx-signed --destination ../gitian.sigs.ltc/ ../MFMCoin/contrib/gitian-descriptors/gitian-osx-signer.yml
+	    mv build/out/MFMCoin-osx-signed.dmg ../MFMCoin-binaries/${VERSION}/MFMCoin-${VERSION}-osx.dmg
 	fi
 	popd
 

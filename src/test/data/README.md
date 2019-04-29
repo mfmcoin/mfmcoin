@@ -1,7 +1,7 @@
 Description
 ------------
 
-This directory contains data-driven tests for various aspects of mFm coin.
+This directory contains data-driven tests for various aspects of MFMCoin.
 
 License
 --------

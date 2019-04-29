@@ -98,8 +98,8 @@
         <translation>Vhura &amp;URI</translation>
     </message>
     <message>
-        <source>mFm coin</source>
-        <translation>mFm coin</translation>
+        <source>MFMCoin</source>
+        <translation>MFMCoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -165,8 +165,8 @@
 <context>
     <name>Intro</name>
     <message>
-        <source>mFm coin</source>
-        <translation>mFm coin</translation>
+        <source>MFMCoin</source>
+        <translation>MFMCoin</translation>
     </message>
     </context>
 <context>
@@ -194,8 +194,8 @@
         <translation>Marii </translation>
     </message>
     <message>
-        <source>Enter a mFm coin address (e.g. %1)</source>
-        <translation>Nyora kero ye mFm coin (sekuti %1)</translation>
+        <source>Enter a MFMCoin address (e.g. %1)</source>
+        <translation>Nyora kero ye MFMCoin (sekuti %1)</translation>
     </message>
     <message>
         <source>%1 d</source>

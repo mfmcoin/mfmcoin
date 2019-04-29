@@ -1,15 +1,15 @@
-mFm coin Core
+MFMCoin Core
 =============
 
 Setup
 ---------------------
-mFm coin Core is the original mFm coin client and it builds the backbone of the network. It downloads and, by default, stores the entire history of mFm coin transactions (which is currently more than 7 GBs); depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more.
+MFMCoin Core is the original MFMCoin client and it builds the backbone of the network. It downloads and, by default, stores the entire history of MFMCoin transactions (which is currently more than 7 GBs); depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more.
 
-To download mFm coin Core, visit [mfmcoin.org](https://mfmcoin.org).
+To download MFMCoin Core, visit [MFMCoin.org](https://MFMCoin.org).
 
 Running
 ---------------------
-The following are some helpful notes on how to run mFm coin on your native platform.
+The following are some helpful notes on how to run MFMCoin on your native platform.
 
 ### Unix
 
@@ -24,18 +24,18 @@ Unpack the files into a directory, and then run mfmcoin-qt.exe.
 
 ### OS X
 
-Drag mFm coin-Core to your applications folder, and then run mFm coin-Core.
+Drag MFMCoin-Core to your applications folder, and then run MFMCoin-Core.
 
 ### Need Help?
 
-* See the documentation at the [mFm coin Wiki](https://mfmcoin.info/)
+* See the documentation at the [MFMCoin Wiki](https://MFMCoin.info/)
 for help and more information.
-* Ask for help on [#mfmcoin](http://webchat.freenode.net?channels=mfmcoin) on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net?channels=mfmcoin).
-* Ask for help on the [mFmcoinTalk](https://mfmcointalk.io/) forums.
+* Ask for help on [#MFMCoin](http://webchat.freenode.net?channels=MFMCoin) on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net?channels=MFMCoin).
+* Ask for help on the [MFMCoinTalk](https://MFMCointalk.io/) forums.
 
 Building
 ---------------------
-The following are developer notes on how to build mFm coin on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
+The following are developer notes on how to build MFMCoin on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
 
 - [Dependencies](dependencies.md)
 - [OS X Build Notes](build-osx.md)
@@ -46,7 +46,7 @@ The following are developer notes on how to build mFm coin on your native platfo
 
 Development
 ---------------------
-The mFm coin repo's [root README](/README.md) contains relevant information on the development process and automated testing.
+The MFMCoin repo's [root README](/README.md) contains relevant information on the development process and automated testing.
 
 - [Developer Notes](developer-notes.md)
 - [Release Notes](release-notes.md)
@@ -61,8 +61,8 @@ The mFm coin repo's [root README](/README.md) contains relevant information on t
 - [Benchmarking](benchmarking.md)
 
 ### Resources
-* Discuss on the [mFmcoinTalk](https://mfmcointalk.io/) forums.
-* Discuss general mFm coin development on #mfmcoin-dev on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net/?channels=mfmcoin-dev).
+* Discuss on the [MFMCoinTalk](https://MFMCointalk.io/) forums.
+* Discuss general MFMCoin development on #MFMCoin-dev on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net/?channels=MFMCoin-dev).
 
 ### Miscellaneous
 - [Assets Attribution](assets-attribution.md)

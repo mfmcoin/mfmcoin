@@ -25,12 +25,12 @@ python27
 
 Download the source code:
 ```
-git clone https://github.com/mfmcoin-project/mfmcoin
+git clone https://github.com/MFMCoin-project/MFMCoin
 ```
 
 See [dependencies.md](dependencies.md) for a complete overview.
 
-### Building mFm coin Core
+### Building MFMCoin Core
 
 **Important**: Use `gmake` (the non-GNU `make` will exit with an error).
 

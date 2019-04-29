@@ -90,8 +90,8 @@
 <context>
     <name>BitcoinGUI</name>
     <message>
-        <source>Send coins to a mFm coin address</source>
-        <translation>ផ្ញើកាក់ទៅកាន់ អាសយដ្ឋាន mFm coin មួយ</translation>
+        <source>Send coins to a MFMCoin address</source>
+        <translation>ផ្ញើកាក់ទៅកាន់ អាសយដ្ឋាន MFMCoin មួយ</translation>
     </message>
     <message>
         <source>Wallet</source>

@@ -1,5 +1,5 @@
-Building mFm coin
+Building MFMCoin
 ================
 
 See doc/build-*.md for instructions on building the various
-elements of the mFm coin Core reference implementation of mFm coin.
+elements of the MFMCoin Core reference implementation of MFMCoin.

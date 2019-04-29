@@ -82,7 +82,7 @@
 // Application startup time (used for uptime calculation)
 const int64_t nStartupTime = GetTime();
 
-const char * const BITCOIN_CONF_FILENAME = "mfmcoin.conf";
+const char * const BITCOIN_CONF_FILENAME = "MFMCoin.conf";
 const char * const BITCOIN_PID_FILENAME = "mfmcoind.pid";
 const char * const DEFAULT_DEBUGLOGFILE = "debug.log";
 
@@ -558,7 +558,7 @@ static std::string FormatException(const std::exception* pex, const char* pszThr
     char pszModule[MAX_PATH] = "";
     GetModuleFileNameA(nullptr, pszModule, sizeof(pszModule));
 #else
-    const char* pszModule = "mfmcoin";
+    const char* pszModule = "MFMCoin";
 #endif
     if (pex)
         return strprintf(
@@ -583,7 +583,7 @@ fs::path GetDefaultDataDir()
     // Unix: ~/.bitcoin
 #ifdef WIN32
     // Windows
-    return GetSpecialFolderPath(CSIDL_APPDATA) / "mFmcoin";
+    return GetSpecialFolderPath(CSIDL_APPDATA) / "MFMCoin";
 #else
     fs::path pathRet;
     char* pszHome = getenv("HOME");
@@ -593,10 +593,10 @@ fs::path GetDefaultDataDir()
         pathRet = fs::path(pszHome);
 #ifdef MAC_OSX
     // Mac
-    return pathRet / "Library/Application Support/mFmcoin";
+    return pathRet / "Library/Application Support/MFMCoin";
 #else
     // Unix
-    return pathRet / ".mfmcoin";
+    return pathRet / ".MFMCoin";
 #endif
 #endif
 }

@@ -1,12 +1,12 @@
 UNIX BUILD NOTES
 ====================
-Some notes on how to build mFm coin Core in Unix.
+Some notes on how to build MFMCoin Core in Unix.
 
 (for OpenBSD specific instructions, see [build-openbsd.md](build-openbsd.md))
 
 Note
 ---------------------
-Always use absolute paths to configure and compile mfmcoin and the dependencies,
+Always use absolute paths to configure and compile MFMCoin and the dependencies,
 for example, when specifying the path of the dependency:
 
 	../dist/configure --enable-cxx --disable-shared --with-pic --prefix=$BDB_PREFIX
@@ -55,7 +55,7 @@ Memory Requirements
 --------------------
 
 C++ compilers are memory-hungry. It is recommended to have at least 1.5 GB of
-memory available when compiling mFm coin Core. On systems with less, gcc can be
+memory available when compiling MFMCoin Core. On systems with less, gcc can be
 tuned to conserve memory with additional CXXFLAGS:
 
 
@@ -94,7 +94,7 @@ BerkeleyDB 5.1 or later, which break binary wallet compatibility with the distri
 are based on BerkeleyDB 4.8. If you do not care about wallet compatibility,
 pass `--with-incompatible-bdb` to configure.
 
-See the section "Disable-wallet mode" to build mFm coin Core without wallet.
+See the section "Disable-wallet mode" to build MFMCoin Core without wallet.
 
 Optional (see --with-miniupnpc and --enable-upnp-default):
 
@@ -107,7 +107,7 @@ ZMQ dependencies (provides ZMQ API 4.x):
 Dependencies for the GUI: Ubuntu & Debian
 -----------------------------------------
 
-If you want to build mFm coin-Qt, make sure that the required packages for Qt development
+If you want to build MFMCoin-Qt, make sure that the required packages for Qt development
 are installed. Either Qt 5 or Qt 4 are necessary to build the GUI.
 If both Qt 4 and Qt 5 are installed, Qt 5 will be used. Pass `--with-gui=qt4` to configure to choose Qt4.
 To build without GUI pass `--without-gui`.
@@ -188,7 +188,7 @@ If you need to build Boost yourself:
 
 Security
 --------
-To help make your mfmcoin installation more secure by making certain attacks impossible to
+To help make your MFMCoin installation more secure by making certain attacks impossible to
 exploit even if a vulnerability is found, binaries are hardened by default.
 This can be disabled with:
 
@@ -212,7 +212,7 @@ Hardening enables the following features:
 
     To test that you have built PIE executable, install scanelf, part of paxutils, and use:
 
-    	scanelf -e ./mfmcoin
+    	scanelf -e ./MFMCoin
 
     The output should contain:
 
@@ -221,13 +221,13 @@ Hardening enables the following features:
 
 * Non-executable Stack
     If the stack is executable then trivial stack based buffer overflow exploits are possible if
-    vulnerable buffers are found. By default, mfmcoin should be built with a non-executable stack
+    vulnerable buffers are found. By default, MFMCoin should be built with a non-executable stack
     but if one of the libraries it uses asks for an executable stack or someone makes a mistake
     and uses a compiler extension which requires an executable stack, it will silently build an
     executable without the non-executable stack protection.
 
     To verify that the stack is non-executable after compiling use:
-    `scanelf -e ./mfmcoin`
+    `scanelf -e ./MFMCoin`
 
     the output should contain:
 	STK/REL/PTL
@@ -237,7 +237,7 @@ Hardening enables the following features:
 
 Disable-wallet mode
 --------------------
-When the intention is to run only a P2P node without a wallet, mfmcoin may be compiled in
+When the intention is to run only a P2P node without a wallet, MFMCoin may be compiled in
 disable-wallet mode with:
 
     ./configure --disable-wallet
@@ -259,8 +259,8 @@ Setup and Build Example: Arch Linux
 This example lists the steps necessary to setup and build a command line only, non-wallet distribution of the latest changes on Arch Linux:
 
     pacman -S git base-devel boost libevent python
-    git clone https://github.com/mfmcoin-project/mfmcoin.git
-    cd mfmcoin/
+    git clone https://github.com/MFMCoin-project/MFMCoin.git
+    cd MFMCoin/
     ./autogen.sh
     ./configure --disable-wallet --without-gui --without-miniupnpc
     make check
@@ -269,7 +269,7 @@ Note:
 Enabling wallet support requires either compiling against a Berkeley DB newer than 4.8 (package `db`) using `--with-incompatible-bdb`,
 or building and depending on a local version of Berkeley DB 4.8. The readily available Arch Linux packages are currently built using
 `--with-incompatible-bdb` according to the [PKGBUILD](https://projects.archlinux.org/svntogit/community.git/tree/bitcoin/trunk/PKGBUILD).
-As mentioned above, when maintaining portability of the wallet between the standard mFm coin Core distributions and independently built
+As mentioned above, when maintaining portability of the wallet between the standard MFMCoin Core distributions and independently built
 node software is desired, Berkeley DB 4.8 must be used.
 
 

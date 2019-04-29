@@ -1,6 +1,6 @@
 ### TestGen ###
 
-Utilities to generate test vectors for the data-driven mFm coin tests.
+Utilities to generate test vectors for the data-driven MFMCoin tests.
 
 Usage: 
 

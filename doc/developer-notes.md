@@ -153,7 +153,7 @@ to see it.
 
 **testnet and regtest modes**
 
-Run with the -testnet option to run with "play mfmcoins" on the test network, if you
+Run with the -testnet option to run with "play MFMCoins" on the test network, if you
 are testing multi-machine code that needs to operate across the internet.
 
 If you are testing something that can run on one machine, run with the -regtest option.
@@ -162,7 +162,7 @@ that run in -regtest mode.
 
 **DEBUG_LOCKORDER**
 
-mFm coin Core is a multithreaded application, and deadlocks or other multithreading bugs
+MFMCoin Core is a multithreaded application, and deadlocks or other multithreading bugs
 can be very difficult to track down. Compiling with -DDEBUG_LOCKORDER (configure
 CXXFLAGS="-DDEBUG_LOCKORDER -g") inserts run-time checks to keep track of which locks
 are held, and adds warnings to the debug.log file if inconsistencies are detected.
@@ -176,9 +176,9 @@ which includes known Valgrind warnings in our dependencies that cannot be fixed
 in-tree. Example use:
 
 ```shell
-$ valgrind --suppressions=contrib/valgrind.supp src/test/test_mfmcoin
+$ valgrind --suppressions=contrib/valgrind.supp src/test/test_MFMCoin
 $ valgrind --suppressions=contrib/valgrind.supp --leak-check=full \
-      --show-leak-kinds=all src/test/test_mfmcoin --log_level=test_suite
+      --show-leak-kinds=all src/test/test_MFMCoin --log_level=test_suite
 $ valgrind -v --leak-check=full src/mfmcoind -printtoconsole
 ```
 
@@ -195,7 +195,7 @@ To enable LCOV report generation during test runs:
 make
 make cov
 
-# A coverage report will now be accessible at `./test_mfmcoin.coverage/index.html`.
+# A coverage report will now be accessible at `./test_MFMCoin.coverage/index.html`.
 ```
 
 Locking/mutex usage notes
@@ -242,7 +242,7 @@ Threads
 
 - ThreadRPCServer : Remote procedure call handler, listens on port 9332 for connections and services them.
 
-- BitcoinMiner : Generates mfmcoins (if wallet is enabled).
+- BitcoinMiner : Generates MFMCoins (if wallet is enabled).
 
 - Shutdown : Does an orderly shutdown of everything.
 
@@ -252,7 +252,7 @@ Ignoring IDE/editor files
 In closed-source environments in which everyone uses the same IDE it is common
 to add temporary files it produces to the project-wide `.gitignore` file.
 
-However, in open source software such as mFm coin Core, where everyone uses
+However, in open source software such as MFMCoin Core, where everyone uses
 their own editors/IDE/tools, it is less common. Only you know what files your
 editor produces and this may change from version to version. The canonical way
 to do this is thus to create your local gitignore. Add this to `~/.gitconfig`:
@@ -282,9 +282,9 @@ Development guidelines
 ============================
 
 A few non-style-related recommendations for developers, as well as points to
-pay attention to for reviewers of mFm coin Core code.
+pay attention to for reviewers of MFMCoin Core code.
 
-General mFm coin Core
+General MFMCoin Core
 ----------------------
 
 - New features should be exposed on RPC first, then can be made available in the GUI
@@ -400,7 +400,7 @@ Strings and formatting
 
 - For `strprintf`, `LogPrint`, `LogPrintf` formatting characters don't need size specifiers
 
-  - *Rationale*: mFm coin Core uses tinyformat, which is type safe. Leave them out to avoid confusion
+  - *Rationale*: MFMCoin Core uses tinyformat, which is type safe. Leave them out to avoid confusion
 
 Variable names
 --------------
@@ -514,12 +514,12 @@ Subtrees
 
 Several parts of the repository are subtrees of software maintained elsewhere.
 
-Some of these are maintained by active developers of mFm coin Core, in which case changes should probably go
+Some of these are maintained by active developers of MFMCoin Core, in which case changes should probably go
 directly upstream without being PRed directly against the project.  They will be merged back in the next
 subtree merge.
 
 Others are external projects without a tight relationship with our project.  Changes to these should also
-be sent upstream but bugfixes may also be prudent to PR against mFm coin Core so that they can be integrated
+be sent upstream but bugfixes may also be prudent to PR against MFMCoin Core so that they can be integrated
 quickly.  Cosmetic changes should be purely taken upstream.
 
 There is a tool in contrib/devtools/git-subtree-check.sh to check a subtree directory for consistency with
@@ -582,7 +582,7 @@ Git and GitHub tips
 
         [remote "upstream-pull"]
                 fetch = +refs/pull/*:refs/remotes/upstream-pull/*
-                url = git@github.com:mfmcoin-project/mfmcoin.git
+                url = git@github.com:MFMCoin-project/MFMCoin.git
 
   This will add an `upstream-pull` remote to your git repository, which can be fetched using `git fetch --all`
   or `git fetch upstream-pull`. Afterwards, you can use `upstream-pull/NUMBER/head` in arguments to `git show`,
@@ -689,7 +689,7 @@ A few guidelines for introducing and reviewing new RPC interfaces:
   RPCs whose behavior does *not* depend on the current chainstate may omit this
   call.
 
-  - *Rationale*: In previous versions of mFm coin Core, the wallet was always
+  - *Rationale*: In previous versions of MFMCoin Core, the wallet was always
     in-sync with the chainstate (by virtue of them all being updated in the
     same cs_main lock). In order to maintain the behavior that wallet RPCs
     return results as of at least the highest best-known block an RPC

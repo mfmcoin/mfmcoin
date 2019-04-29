@@ -5,7 +5,7 @@ Before every release candidate:
 
 * Update translations (ping wumpus on IRC) see [translation_process.md](https://github.com/bitcoin/bitcoin/blob/master/doc/translation_process.md#synchronising-translations).
 
-* Update manpages, see [gen-manpages.sh](https://github.com/mfmcoin-project/mfmcoin/blob/master/contrib/devtools/README.md#gen-manpagessh).
+* Update manpages, see [gen-manpages.sh](https://github.com/MFMCoin-project/MFMCoin/blob/master/contrib/devtools/README.md#gen-manpagessh).
 
 Before every minor and major release:
 
@@ -33,12 +33,12 @@ If you're using the automated script (found in [contrib/gitian-build.sh](/contri
 Check out the source code in the following directory hierarchy.
 
     cd /path/to/your/toplevel/build
-    git clone https://github.com/mfmcoin-project/gitian.sigs.ltc.git
-    git clone https://github.com/mfmcoin-project/mfmcoin-detached-sigs.git
+    git clone https://github.com/MFMCoin-project/gitian.sigs.ltc.git
+    git clone https://github.com/MFMCoin-project/MFMCoin-detached-sigs.git
     git clone https://github.com/devrandom/gitian-builder.git
-    git clone https://github.com/mfmcoin-project/mfmcoin.git
+    git clone https://github.com/MFMCoin-project/MFMCoin.git
 
-### mFm coin maintainers/release engineers, suggestion for writing release notes
+### MFMCoin maintainers/release engineers, suggestion for writing release notes
 
 Write release notes. git shortlog helps a lot, for example:
 
@@ -61,7 +61,7 @@ If you're using the automated script (found in [contrib/gitian-build.sh](/contri
 
 Setup Gitian descriptors:
 
-    pushd ./mfmcoin
+    pushd ./MFMCoin
     export SIGNER=(your Gitian key, ie bluematt, sipa, etc)
     export VERSION=(new version, e.g. 0.8.0)
     git fetch
@@ -95,7 +95,7 @@ Create the OS X SDK tarball, see the [OS X readme](README_osx.md) for details, a
 By default, Gitian will fetch source files as needed. To cache them ahead of time:
 
     pushd ./gitian-builder
-    make -C ../mfmcoin/depends download SOURCES_PATH=`pwd`/cache/common
+    make -C ../MFMCoin/depends download SOURCES_PATH=`pwd`/cache/common
     popd
 
 Only missing files will be fetched, so this is safe to re-run for each build.
@@ -103,53 +103,53 @@ Only missing files will be fetched, so this is safe to re-run for each build.
 NOTE: Offline builds must use the --url flag to ensure Gitian fetches only from local URLs. For example:
 
     pushd ./gitian-builder
-    ./bin/gbuild --url mfmcoin=/path/to/mfmcoin,signature=/path/to/sigs {rest of arguments}
+    ./bin/gbuild --url MFMCoin=/path/to/MFMCoin,signature=/path/to/sigs {rest of arguments}
     popd
 
 The gbuild invocations below <b>DO NOT DO THIS</b> by default.
 
-### Build and sign mFm coin Core for Linux, Windows, and OS X:
+### Build and sign MFMCoin Core for Linux, Windows, and OS X:
 
     export GITIAN_THREADS=2
     export GITIAN_MEMORY=3000
     
     pushd ./gitian-builder
-    ./bin/gbuild --num-make $GITIAN_THREADS --memory $GITIAN_MEMORY --commit mfmcoin=v${VERSION} ../mfmcoin/contrib/gitian-descriptors/gitian-linux.yml
-    ./bin/gsign --signer $SIGNER --release ${VERSION}-linux --destination ../gitian.sigs.ltc/ ../mfmcoin/contrib/gitian-descriptors/gitian-linux.yml
-    mv build/out/mfmcoin-*.tar.gz build/out/src/mfmcoin-*.tar.gz ../
+    ./bin/gbuild --num-make $GITIAN_THREADS --memory $GITIAN_MEMORY --commit MFMCoin=v${VERSION} ../MFMCoin/contrib/gitian-descriptors/gitian-linux.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-linux --destination ../gitian.sigs.ltc/ ../MFMCoin/contrib/gitian-descriptors/gitian-linux.yml
+    mv build/out/MFMCoin-*.tar.gz build/out/src/MFMCoin-*.tar.gz ../
 
-    ./bin/gbuild --num-make $GITIAN_THREADS --memory $GITIAN_MEMORY --commit mfmcoin=v${VERSION} ../mfmcoin/contrib/gitian-descriptors/gitian-win.yml
-    ./bin/gsign --signer $SIGNER --release ${VERSION}-win-unsigned --destination ../gitian.sigs.ltc/ ../mfmcoin/contrib/gitian-descriptors/gitian-win.yml
-    mv build/out/mfmcoin-*-win-unsigned.tar.gz inputs/mfmcoin-win-unsigned.tar.gz
-    mv build/out/mfmcoin-*.zip build/out/mfmcoin-*.exe ../
+    ./bin/gbuild --num-make $GITIAN_THREADS --memory $GITIAN_MEMORY --commit MFMCoin=v${VERSION} ../MFMCoin/contrib/gitian-descriptors/gitian-win.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-win-unsigned --destination ../gitian.sigs.ltc/ ../MFMCoin/contrib/gitian-descriptors/gitian-win.yml
+    mv build/out/MFMCoin-*-win-unsigned.tar.gz inputs/MFMCoin-win-unsigned.tar.gz
+    mv build/out/MFMCoin-*.zip build/out/MFMCoin-*.exe ../
 
-    ./bin/gbuild --num-make $GITIAN_THREADS --memory $GITIAN_MEMORY --commit mfmcoin=v${VERSION} ../mfmcoin/contrib/gitian-descriptors/gitian-osx.yml
-    ./bin/gsign --signer $SIGNER --release ${VERSION}-osx-unsigned --destination ../gitian.sigs.ltc/ ../mfmcoin/contrib/gitian-descriptors/gitian-osx.yml
-    mv build/out/mfmcoin-*-osx-unsigned.tar.gz inputs/mfmcoin-osx-unsigned.tar.gz
-    mv build/out/mfmcoin-*.tar.gz build/out/mfmcoin-*.dmg ../
+    ./bin/gbuild --num-make $GITIAN_THREADS --memory $GITIAN_MEMORY --commit MFMCoin=v${VERSION} ../MFMCoin/contrib/gitian-descriptors/gitian-osx.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-osx-unsigned --destination ../gitian.sigs.ltc/ ../MFMCoin/contrib/gitian-descriptors/gitian-osx.yml
+    mv build/out/MFMCoin-*-osx-unsigned.tar.gz inputs/MFMCoin-osx-unsigned.tar.gz
+    mv build/out/MFMCoin-*.tar.gz build/out/MFMCoin-*.dmg ../
     popd
 
 Build output expected:
 
-  1. source tarball (`mfmcoin-${VERSION}.tar.gz`)
-  2. linux 32-bit and 64-bit dist tarballs (`mfmcoin-${VERSION}-linux[32|64].tar.gz`)
-  3. windows 32-bit and 64-bit unsigned installers and dist zips (`mfmcoin-${VERSION}-win[32|64]-setup-unsigned.exe`, `mfmcoin-${VERSION}-win[32|64].zip`)
-  4. OS X unsigned installer and dist tarball (`mfmcoin-${VERSION}-osx-unsigned.dmg`, `mfmcoin-${VERSION}-osx64.tar.gz`)
+  1. source tarball (`MFMCoin-${VERSION}.tar.gz`)
+  2. linux 32-bit and 64-bit dist tarballs (`MFMCoin-${VERSION}-linux[32|64].tar.gz`)
+  3. windows 32-bit and 64-bit unsigned installers and dist zips (`MFMCoin-${VERSION}-win[32|64]-setup-unsigned.exe`, `MFMCoin-${VERSION}-win[32|64].zip`)
+  4. OS X unsigned installer and dist tarball (`MFMCoin-${VERSION}-osx-unsigned.dmg`, `MFMCoin-${VERSION}-osx64.tar.gz`)
   5. Gitian signatures (in `gitian.sigs.ltc/${VERSION}-<linux|{win,osx}-unsigned>/(your Gitian key)/`)
 
 ### Verify other gitian builders signatures to your own. (Optional)
 
 Add other gitian builders keys to your gpg keyring, and/or refresh keys.
 
-    gpg --import mfmcoin/contrib/gitian-keys/*.pgp
+    gpg --import MFMCoin/contrib/gitian-keys/*.pgp
     gpg --refresh-keys
 
 Verify the signatures
 
     pushd ./gitian-builder
-    ./bin/gverify -v -d ../gitian.sigs.ltc/ -r ${VERSION}-linux ../mfmcoin/contrib/gitian-descriptors/gitian-linux.yml
-    ./bin/gverify -v -d ../gitian.sigs.ltc/ -r ${VERSION}-win-unsigned ../mfmcoin/contrib/gitian-descriptors/gitian-win.yml
-    ./bin/gverify -v -d ../gitian.sigs.ltc/ -r ${VERSION}-osx-unsigned ../mfmcoin/contrib/gitian-descriptors/gitian-osx.yml
+    ./bin/gverify -v -d ../gitian.sigs.ltc/ -r ${VERSION}-linux ../MFMCoin/contrib/gitian-descriptors/gitian-linux.yml
+    ./bin/gverify -v -d ../gitian.sigs.ltc/ -r ${VERSION}-win-unsigned ../MFMCoin/contrib/gitian-descriptors/gitian-win.yml
+    ./bin/gverify -v -d ../gitian.sigs.ltc/ -r ${VERSION}-osx-unsigned ../MFMCoin/contrib/gitian-descriptors/gitian-osx.yml
     popd
 
 ### Next steps:
@@ -170,22 +170,22 @@ Codesigner only: Create Windows/OS X detached signatures:
 
 Codesigner only: Sign the osx binary:
 
-    transfer mfmcoin-osx-unsigned.tar.gz to osx for signing
-    tar xf mfmcoin-osx-unsigned.tar.gz
+    transfer MFMCoin-osx-unsigned.tar.gz to osx for signing
+    tar xf MFMCoin-osx-unsigned.tar.gz
     ./detached-sig-create.sh -s "Key ID"
     Enter the keychain password and authorize the signature
     Move signature-osx.tar.gz back to the gitian host
 
 Codesigner only: Sign the windows binaries:
 
-    tar xf mfmcoin-win-unsigned.tar.gz
+    tar xf MFMCoin-win-unsigned.tar.gz
     ./detached-sig-create.sh -key /path/to/codesign.key
     Enter the passphrase for the key when prompted
     signature-win.tar.gz will be created
 
 Codesigner only: Commit the detached codesign payloads:
 
-    cd ~/mfmcoin-detached-sigs
+    cd ~/MFMCoin-detached-sigs
     checkout the appropriate branch for this release series
     rm -rf *
     tar xf signature-osx.tar.gz
@@ -198,25 +198,25 @@ Codesigner only: Commit the detached codesign payloads:
 Non-codesigners: wait for Windows/OS X detached signatures:
 
 - Once the Windows/OS X builds each have 3 matching signatures, they will be signed with their respective release keys.
-- Detached signatures will then be committed to the [mfmcoin-detached-sigs](https://github.com/mfmcoin-project/mfmcoin-detached-sigs) repository, which can be combined with the unsigned apps to create signed binaries.
+- Detached signatures will then be committed to the [MFMCoin-detached-sigs](https://github.com/MFMCoin-project/MFMCoin-detached-sigs) repository, which can be combined with the unsigned apps to create signed binaries.
 
 Create (and optionally verify) the signed OS X binary:
 
     pushd ./gitian-builder
-    ./bin/gbuild -i --commit signature=v${VERSION} ../mfmcoin/contrib/gitian-descriptors/gitian-osx-signer.yml
-    ./bin/gsign --signer $SIGNER --release ${VERSION}-osx-signed --destination ../gitian.sigs.ltc/ ../mfmcoin/contrib/gitian-descriptors/gitian-osx-signer.yml
-    ./bin/gverify -v -d ../gitian.sigs.ltc/ -r ${VERSION}-osx-signed ../mfmcoin/contrib/gitian-descriptors/gitian-osx-signer.yml
-    mv build/out/mfmcoin-osx-signed.dmg ../mfmcoin-${VERSION}-osx.dmg
+    ./bin/gbuild -i --commit signature=v${VERSION} ../MFMCoin/contrib/gitian-descriptors/gitian-osx-signer.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-osx-signed --destination ../gitian.sigs.ltc/ ../MFMCoin/contrib/gitian-descriptors/gitian-osx-signer.yml
+    ./bin/gverify -v -d ../gitian.sigs.ltc/ -r ${VERSION}-osx-signed ../MFMCoin/contrib/gitian-descriptors/gitian-osx-signer.yml
+    mv build/out/MFMCoin-osx-signed.dmg ../MFMCoin-${VERSION}-osx.dmg
     popd
 
 Create (and optionally verify) the signed Windows binaries:
 
     pushd ./gitian-builder
-    ./bin/gbuild -i --commit signature=v${VERSION} ../mfmcoin/contrib/gitian-descriptors/gitian-win-signer.yml
-    ./bin/gsign --signer $SIGNER --release ${VERSION}-win-signed --destination ../gitian.sigs.ltc/ ../mfmcoin/contrib/gitian-descriptors/gitian-win-signer.yml
-    ./bin/gverify -v -d ../gitian.sigs.ltc/ -r ${VERSION}-win-signed ../mfmcoin/contrib/gitian-descriptors/gitian-win-signer.yml
-    mv build/out/mfmcoin-*win64-setup.exe ../mfmcoin-${VERSION}-win64-setup.exe
-    mv build/out/mfmcoin-*win32-setup.exe ../mfmcoin-${VERSION}-win32-setup.exe
+    ./bin/gbuild -i --commit signature=v${VERSION} ../MFMCoin/contrib/gitian-descriptors/gitian-win-signer.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-win-signed --destination ../gitian.sigs.ltc/ ../MFMCoin/contrib/gitian-descriptors/gitian-win-signer.yml
+    ./bin/gverify -v -d ../gitian.sigs.ltc/ -r ${VERSION}-win-signed ../MFMCoin/contrib/gitian-descriptors/gitian-win-signer.yml
+    mv build/out/MFMCoin-*win64-setup.exe ../MFMCoin-${VERSION}-win64-setup.exe
+    mv build/out/MFMCoin-*win32-setup.exe ../MFMCoin-${VERSION}-win32-setup.exe
     popd
 
 Commit your signature for the signed OS X/Windows binaries:
@@ -238,23 +238,23 @@ sha256sum * > SHA256SUMS
 
 The list of files should be:
 ```
-mfmcoin-${VERSION}-aarch64-linux-gnu.tar.gz
-mfmcoin-${VERSION}-arm-linux-gnueabihf.tar.gz
-mfmcoin-${VERSION}-i686-pc-linux-gnu.tar.gz
-mfmcoin-${VERSION}-x86_64-linux-gnu.tar.gz
-mfmcoin-${VERSION}-osx64.tar.gz
-mfmcoin-${VERSION}-osx.dmg
-mfmcoin-${VERSION}.tar.gz
-mfmcoin-${VERSION}-win32-setup.exe
-mfmcoin-${VERSION}-win32.zip
-mfmcoin-${VERSION}-win64-setup.exe
-mfmcoin-${VERSION}-win64.zip
+MFMCoin-${VERSION}-aarch64-linux-gnu.tar.gz
+MFMCoin-${VERSION}-arm-linux-gnueabihf.tar.gz
+MFMCoin-${VERSION}-i686-pc-linux-gnu.tar.gz
+MFMCoin-${VERSION}-x86_64-linux-gnu.tar.gz
+MFMCoin-${VERSION}-osx64.tar.gz
+MFMCoin-${VERSION}-osx.dmg
+MFMCoin-${VERSION}.tar.gz
+MFMCoin-${VERSION}-win32-setup.exe
+MFMCoin-${VERSION}-win32.zip
+MFMCoin-${VERSION}-win64-setup.exe
+MFMCoin-${VERSION}-win64.zip
 ```
 The `*-debug*` files generated by the gitian build contain debug symbols
 for troubleshooting by developers. It is assumed that anyone that is interested
 in debugging can run gitian to generate the files for themselves. To avoid
 end-user confusion about which file to pick, as well as save storage
-space *do not upload these to the mfmcoin.org server, nor put them in the torrent*.
+space *do not upload these to the MFMCoin.org server, nor put them in the torrent*.
 
 - GPG-sign it, delete the unsigned file:
 ```
@@ -264,24 +264,24 @@ rm SHA256SUMS
 (the digest algorithm is forced to sha256 to avoid confusion of the `Hash:` header that GPG adds with the SHA256 used for the files)
 Note: check that SHA256SUMS itself doesn't end up in SHA256SUMS, which is a spurious/nonsensical entry.
 
-- Upload zips and installers, as well as `SHA256SUMS.asc` from last step, to the mfmcoin.org server.
+- Upload zips and installers, as well as `SHA256SUMS.asc` from last step, to the MFMCoin.org server.
 
 ```
 
-- Update mfmcoin.org version
+- Update MFMCoin.org version
 
 - Announce the release:
 
-  - mfmcoin-dev and mfmcoin-dev mailing list
+  - MFMCoin-dev and MFMCoin-dev mailing list
 
-  - blog.mfmcoin.org blog post
+  - blog.MFMCoin.org blog post
 
-  - Update title of #mfmcoin and #mfmcoin-dev on Freenode IRC
+  - Update title of #MFMCoin and #MFMCoin-dev on Freenode IRC
 
-  - Optionally twitter, reddit /r/mFm coin, ... but this will usually sort out itself
+  - Optionally twitter, reddit /r/MFMCoin, ... but this will usually sort out itself
 
   - Archive release notes for the new version to `doc/release-notes/` (branch `master` and branch of the release)
 
-  - Create a [new GitHub release](https://github.com/mfmcoin-project/mfmcoin/releases/new) with a link to the archived release notes.
+  - Create a [new GitHub release](https://github.com/MFMCoin-project/MFMCoin/releases/new) with a link to the archived release notes.
 
   - Celebrate

@@ -57,8 +57,8 @@ static int AppInitRawTx(int argc, char* argv[])
         // First part of help message is specific to this utility
         std::string strUsage = strprintf(_("%s mfmcoin-tx utility version"), _(PACKAGE_NAME)) + " " + FormatFullVersion() + "\n\n" +
             _("Usage:") + "\n" +
-              "  mfmcoin-tx [options] <hex-tx> [commands]  " + _("Update hex-encoded mfmcoin transaction") + "\n" +
-              "  mfmcoin-tx [options] -create [commands]   " + _("Create hex-encoded mfmcoin transaction") + "\n" +
+              "  mfmcoin-tx [options] <hex-tx> [commands]  " + _("Update hex-encoded MFMCoin transaction") + "\n" +
+              "  mfmcoin-tx [options] -create [commands]   " + _("Create hex-encoded MFMCoin transaction") + "\n" +
               "\n";
 
         fprintf(stdout, "%s", strUsage.c_str());

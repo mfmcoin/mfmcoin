@@ -44,17 +44,17 @@ from the root of the repository.
 
 **Note**: You only need Berkeley DB if the wallet is enabled (see the section *Disable-Wallet mode* below).
 
-Build mFm coin Core
+Build MFMCoin Core
 ------------------------
 
-1. Clone the mfmcoin source code and cd into `mfmcoin`
+1. Clone the MFMCoin source code and cd into `MFMCoin`
 
-        git clone https://github.com/mfmcoin-project/mfmcoin
-        cd mfmcoin
+        git clone https://github.com/MFMCoin-project/MFMCoin
+        cd MFMCoin
 
-2.  Build mfmcoin-core:
+2.  Build MFMCoin-core:
 
-    Configure and build the headless mfmcoin binaries as well as the GUI (if Qt is found).
+    Configure and build the headless MFMCoin binaries as well as the GUI (if Qt is found).
 
     You can disable the GUI build by passing `--without-gui` to configure.
 
@@ -76,37 +76,37 @@ Build mFm coin Core
 
     or
 
-        cd ~/mfmcoin/src
+        cd ~/MFMCoin/src
         cp mfmcoind /usr/local/bin/
         cp mfmcoin-cli /usr/local/bin/
 
 Running
 -------
 
-mFm coin Core is now available at `./src/mfmcoind`
+MFMCoin Core is now available at `./src/mfmcoind`
 
 Before running, it's recommended you create an RPC configuration file.
 
-    echo -e "rpcuser=mfmcoinrpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/mFm coin/mfmcoin.conf"
+    echo -e "rpcuser=MFMCoinrpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/MFMCoin/MFMCoin.conf"
 
-    chmod 600 "/Users/${USER}/Library/Application Support/mFm coin/mfmcoin.conf"
+    chmod 600 "/Users/${USER}/Library/Application Support/MFMCoin/MFMCoin.conf"
 
 The first time you run mfmcoind, it will start downloading the blockchain. This process could take several hours.
 
 You can monitor the download process by looking at the debug.log file:
 
-    tail -f $HOME/Library/Application\ Support/mFm coin/debug.log
+    tail -f $HOME/Library/Application\ Support/MFMCoin/debug.log
 
 Other commands:
 -------
 
-    ./src/mfmcoind -daemon # Starts the mfmcoin daemon.
+    ./src/mfmcoind -daemon # Starts the MFMCoin daemon.
     ./src/mfmcoin-cli --help # Outputs a list of command-line options.
     ./src/mfmcoin-cli help # Outputs a list of RPC commands when the daemon is running.
 
 Using Qt Creator as IDE
 ------------------------
-You can use Qt Creator as an IDE, for mfmcoin development.
+You can use Qt Creator as an IDE, for MFMCoin development.
 Download and install the community edition of [Qt Creator](https://www.qt.io/download/).
 Uncheck everything except Qt Creator during the installation process.
 
