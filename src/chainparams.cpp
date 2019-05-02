@@ -127,6 +127,10 @@ public:
         assert(consensus.hashGenesisBlock == uint256S("0x53b2a6d089ead1fa52f59d95e3a97ebebfade8cf26032c9c61debdc301a14849"));
         assert(genesis.hashMerkleRoot == uint256S("0xb3a5587f0bcf1196dd5122f1f0312bf865f0550979ce0d149089e05822fb0b87"));
 
+        vFixedSeeds.clear();
+        vSeeds.clear();              
+        vSeeds.emplace_back("dnsseed.mfmcoin.com");
+
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,44);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,46);
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,176);
@@ -212,6 +216,7 @@ public:
 
         vFixedSeeds.clear();
         vSeeds.clear();              
+        vSeeds.emplace_back("dnsseed.mfmcoin.com");
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,144);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,146);
@@ -294,7 +299,7 @@ public:
 
         vFixedSeeds.clear(); //!< Regtest mode doesn't have any fixed seeds.
         vSeeds.clear();      //!< Regtest mode doesn't have any DNS seeds.
-        vSeeds.emplace_back("dnsseed.MFMCoin.com");
+        vSeeds.emplace_back("dnsseed.mfmcoin.com");
 
         fDefaultConsistencyChecks = true;
         fRequireStandard = false;
